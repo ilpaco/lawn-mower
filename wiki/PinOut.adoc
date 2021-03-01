@@ -7,7 +7,7 @@
 
 == Arduino Mega2560 Schematic Table reference
 
-image:https://github.com/ilpaco/lawn-mower/blob/dev/Fritz_Diagram/Main_bb.png[alt="Mega2560",width=128,height=128]
+image:https://github.com/ilpaco/lawn-mower/blob/dev/Fritz_Diagram/Main_bb.png[alt="Mega2560"]
 
 .*Pinout Left Header*
 [width="90%",cols="6*^.^",frame="topbot",options="header"]
