@@ -45,7 +45,8 @@ Upload the code contained in this sketch on to your board
   └── wiki				  => Documents
 		└── HowTo.adoc        => A description related on how to it works
 		└── Pinout.adoc       => Pinout reference mapping of all PCB used
-		└── Troubleshoot.adoc => Troubleshooting guide and reference for all error codes        
+		└── Troubleshoot.adoc => Troubleshooting guide and reference for all error codes
+  └── Fritz_Diagram		  => Electronic Diagram based on Fritz
   
 ....
 
