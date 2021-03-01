@@ -42,8 +42,10 @@ Upload the code contained in this sketch on to your board
   ├── schematics.png      => (optional) an image of the required schematics
   ├── layout.png          => (optional) an image of the layout
   └── ReadMe.adoc         => this file
-  └── Z_Pinout.adoc       => Pinout reference mapping of all PCB used
-  └── Z_Troubleshoot.adoc => Troubleshooting guide and reference for all error codes        
+  └── wiki				  => Documents
+		└── HowTo.adoc        => A description related on how to it works
+		└── Pinout.adoc       => Pinout reference mapping of all PCB used
+		└── Troubleshoot.adoc => Troubleshooting guide and reference for all error codes        
   
 ....
 
