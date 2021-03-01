@@ -1,0 +1,144 @@
+:Author: il_paco
+:Email: {AuthorEmail}
+:Date: 05/08/2020
+:Revision: version#
+:License: Public Domain
+
+= How To
+
+
+== Larghezza di Taglio
+La larghezza di taglio deve essere tra 460-500 cm.
+
+
+
+== Motor components for cutter blades
+ciascuna delle lame è equipaggiata con un motore brushless e con un regolatore ESC.
+
+==== SkyRC ARES PRO V2.1 21.5T SPEC 1760Kv
+[width="90%",cols="2*^.^",frame="topbot"]
+|===
+| Produttore | T-Motor
+| Lunghezza	| 34 mm
+| Diametro	| 28,8 mm
+| Tipo rotore | Cassa rotante
+| Senso di rotazione | CCW - Trattivo, CW - Propulsivo
+| Peso | 79 g
+| Giri/V | 880
+| Assorbimento | *Max 25A per 180 sec A*
+| N. celle LiPo | 2, *3*, 4
+| Diametro asse	| 4 mm
+| Variatore (ESC) | 25 A (non incluso)
+| Potenza | Max 350 W x 180 secondi
+|===
+
+
+[source]
+La tensione massima della batteria è  12,6v
+La tensione nominale della batteria è 10,8v
+Per cui il motore al 100% della potenza ha una velocità angolare pari a:
+    880KV x 12,6v <-> 880KV x 10,8v 
+    11.088 Rpm <-> 9504 Rpm
+
+Ora dobbiamo determinare data larghezza di taglio di ogni singola lama, a quanti giri possiamo far girare il motore senza superare la velocità del suono, calcolando la *velocità tangenziale al numero massimi di giri del motore*
+
+[source]
+calcolo della velocità tangenziale:
+                     Raggio(mt) x Delta angolo percorso(radianti) 
+Vtangenziale =      ----------------------------------------------
+                      Tempo impiegato per ruotare (secondi)
+                      
+Esempio: raggio 3mt, percorro 30gradi in 2 secondi
+
+                     2(mt) x  PiGreco/6 (radianti) 
+Vtangenziale =      --------------------------------= 0,8 m/s
+                      2(s)
+                      
+*Nel nostro caso abbiamo:*
+
+- raggio 0,20 (20cm)
+
+- percorro 360gradi = 2Pigreco (radianti) 
+
+- 184,8 giri al secondo @11.088rpm. Prendiamo per eccesso 185 giri al secondo, che corrisponde ad un angolo giro (360°) ogni 0,0054 secondi.
+
+[source]
+                     0,20(mt) x  2*PiGreco (radianti) 
+Vtangenziale =      --------------------------------=  circa 232,6 m/s
+                      0,0054(s)
+                      
+*Per cui l'estremità del nostro disco da taglio avrà una velocità tangenziale di _232,6_ m/s al numero di RPM massimi con batteria completamente carica.* Essendo la velocità del suono pari a 343 m/s,  siamo sotto alla velocità del suono.
+
+==== FullPower Variatore PRO 25A BEC
+[width="90%",cols="2*^.^",frame="topbot"]
+|===
+| Produttore | FullPower
+| Corrente continua | 25 A
+| Corrente picco | 35 A
+| N. celle LiPo | 2, *3*, 4
+| Freno	| *Si*
+| Retromarcia |	*No*
+| BEC	| 5V/2A
+| Peso	| 19 g
+| Dimensioni | 28x28x8mm mm
+| Input rate | 400 Hz
+| Frequenza switching | Khz	16
+|===
+
+==== *Ipotesi consumi e potenza per le lame*
+Abbiamo 3 motori collegati ai rispettivi Variatori di potenza, guardando le specs del motore collegato ad una elica 10" x 4.7" abbiamo i seguenti parametri:
+[width="90%",cols="7*^.^",frame="topbot",options="header"]
+|===
+| Throttle | Voltage (V) | Current (A) | Power (W) | RPM | Torque (N*m) | Efficiency g/W 
+| 40% | 14.7 | 4.91 | 72 | 5265 | 0.090 | 8.09
+| 50% | 14.66 | 6.79 | 99.33 | 5864 | 0.114 | 7.34
+| 65% | 14.56 | 10.96 | 159 | 6920 | 0.162 | 6.41
+| 75% | 14.47 | 14.85 | 214 | 7608 | 0.199 | 5.79
+|===
+
+Ipotizziamo un  setpoint intorno al 40% per tanto con un consumo ipotetico di 70 Watt ed una corrente di 4.91 ampere per motore.  *`Attenzione che i dati di RPM, corrente e consumo sono riferiti ad una elica`* Quindi complessivamente otteniamo:
+[width="90%",cols="2*^.^",frame="topbot"]
+|===
+| Potenza | 210 Watt
+| RPM | 5300 RPM
+| Corrente | 15 Amp
+|===
+
+
+
+== Battery Pack
+*20400* MAH BATTERY PACK
+
+*Panasonic 18650B Cells* x *18 Cells* in 3S Format to make a *12.6V 20400mah* Battery
+
+.*Battery Cells*
+[width="90%",cols="2*^.^",frame="topbot"]
+|===
+| Marchio | Panasonic
+| Modello | 18650 NCR18650B
+| *Capacità* | *3400mAh (capacità minima 3250mAh)*
+| *Tensione nominale* | *3,6V* 
+| Tensione di carica |  finale 4,2V, 
+| Tensione di scarica finale | 2,5V
+| corrente di scarica massima 2C | 6.2A
+| Dimensioni | Diametro  18,20 mm ± 0,1, altezza 65,00 mm ± 0,15 mm
+| Peso | 46 g ± 1 g
+| Metodo di carica | CC-CV
+|===
+*`Nota:`* La capacità di scarica massima della batteria è 2C ma le performance della batteria decadono molto rapidamente. L'ideale è quella di utilizzare idealmente una scarica di 1C = 3400 mAh.
+
+.*Battery Pack*
+[width="90%",cols="2*^.^",frame="topbot"]
+|====
+| *Battery Pack* | 
+| Parallel | 3400mah x 6 = 20.400mah => *20,4 Amp Hour*
+| Series  |  3,7v x 3 = 11,1 Volt.
+| Total weight | 46gr x 18 = *828gr.*
+|====
+
+== Theorical Range
+[width="90%",cols="2*^.^",frame="topbot"]
+|===
+| Capacity *20400 mah* | 
+| `TODO` | 
+|===

@@ -1,0 +1,18 @@
+:Author: il_paco
+:Email: {AuthorEmail}
+:Date: 05/08/2020
+:Revision: version#
+:License: Public Domain
+
+
+= Troubleshooting
+
+
+
+== Error Warning Code List
+.*Error/warning Code*
+[width="90%",cols="3*^.^",frame="topbot",options="header"]
+|========================================================= 
+| Err / warn Code | Description | Proposed Solution 
+| *IN +* | Input                | Power Supply input *+*
+|========================================================= 
