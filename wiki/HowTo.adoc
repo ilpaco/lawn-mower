@@ -69,7 +69,7 @@ Vtangenziale =      --------------------------------=  circa 116 m/s
                       
 *Per cui l'estremità del nostro disco da taglio avrà una velocità tangenziale di 116_ m/s al numero di RPM massimi con batteria completamente carica.* Essendo la velocità del suono pari a 343 m/s,  siamo sotto alla velocità del suono.
 
-==== FullPower Variatore PRO 25A BEC
+==== FullPower Variatore PRO 25A BEC - Electronic Speed Controller (ESC)
 [width="90%",cols="2*^.^",frame="topbot"]
 |===
 | Produttore | FullPower
@@ -84,6 +84,9 @@ Vtangenziale =      --------------------------------=  circa 116 m/s
 | Input rate | 400 Hz
 | Frequenza switching | Khz	16
 |===
+
+==== References on ESC, Brushless
+https://www.youtube.com/watch?v=oGElxbL7exk[Tutorial on how to interface ESC - italian]
 
 ==== *Ipotesi consumi e potenza per le lame*
 Abbiamo 3 motori collegati ai rispettivi Variatori di potenza, guardando le specs del motore collegato ad una elica 10" x 4.7" abbiamo i seguenti parametri:

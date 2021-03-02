@@ -4,6 +4,10 @@
    https://www.pjrc.com/teensy/td_libs_Time.html
 */
 
+// DS1307RTC - Version: Latest
+#include <DS1307RTC.h>
+#include <Wire.h>
+
 //Global Variables
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 int lastRTClockError=0;  //latest error code on Real Time Clock

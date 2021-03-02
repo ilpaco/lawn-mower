@@ -5,6 +5,9 @@
   https://learn.sparkfun.com/tutorials/microsd-breakout-with-level-shifter-hookup-guide?_ga=2.102369153.1649077145.1614009245-446441880.1614009245
 */
 
+// SD - Version: Latest
+#include <SD.h>
+
 //Global Variables
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 

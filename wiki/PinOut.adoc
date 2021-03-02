@@ -52,15 +52,15 @@ image:https://github.com/ilpaco/lawn-mower/blob/dev/Fritz_Diagram/Main_bb.png[al
 | tbd | D12 | - | D12 PWM | - | PCINT 6
 | tbd | D11 | - | D11 PWM | - | PCINT 5
 | tbd | D10 | - | D10 PWM | - | PCINT 4
-| tbd | D9 | - | D9 PWM | - | -
-| tbd | D8 | - | D8 PWM | - | -
+| *ESC Blade drive #3 - Pin Pulse* | D9 | - | D9 PWM | - | -
+| *ESC Blade drive #2 - Pin Pulse* | D8 | - | D8 PWM | - | -
 | - | - | - | - | - | - 
-| *Blade drive#3->Pin 2-LPWM* | D7 | - | D7 PWM | - | -
-| *Blade drive#3->Pin 1-RPWM* | D6 | - | D6 PWM | - | -
-| *Blade drive#2->Pin 2-LPWM* | D5 | - | D5 PWM | - | -
-| *Blade drive#2->Pin 1-RPWM* | D4 | - | D4 PWM | - | -
-| *Blade drive#1->Pin 2-LPWM* | D3 | - | D3 PWM | - | INT[5]
-| *Blade drive#1->Pin 1-RPWM* | D2 | - | D2 PWM | - | INT[4]
+| *ESC Blade drive #1 - Pin Pulse* | D7 | - | D7 PWM | - | -
+| tbd | D6 | - | D6 PWM | - | -
+| tbd | D5 | - | D5 PWM | - | -
+| tbd | D4 | - | D4 PWM | - | -
+| tbd | D3 | - | D3 PWM | - | INT[5]
+| tbd | D2 | - | D2 PWM | - | INT[4]
 | tbd | D1 | - | D1 PWM | TX0 | -
 | tbd | D0 | - | D0 PWM | RX0 | PCINT 8
 | - | - | - | - | - | - 
@@ -122,14 +122,32 @@ image:https://github.com/ilpaco/lawn-mower/blob/dev/Fritz_Diagram/Main_bb.png[al
 *`ATTENTION: Output voltage MUST be adjusted before connect PCB to Supply OUT`*
 
 .Pinout DC-DC Converter
-[width="90%",cols="3*^.^",frame="topbot",options="header"]
+[width="90%",cols="5*^.^",frame="topbot",options="header"]
 |========================================================= 
-| Pin Label | Input Output |Description 
-| *IN +* | Input | Power Supply input *+*
-| *IN -* | Input | Power Supply input *-*
-| *Vout +* | Output | Power Supply Out 5V
-| *Vout -* | Output | Power Supply Out GND
+| Pin Label | Input Output |Description  | Wire Color | AWG
+| *IN +* | Input | Power Supply input *+* | tbd | tbd
+| *IN -* | Input | Power Supply input *-* | tbd | tbd
+| *Vout +* | Output | Power Supply Out 5V | Red | tbd
+| *Vout -* | Output | Power Supply Out GND | Black | tbd
 |========================================================= 
+
+== Electronic Speed Control Driver for Blades
+
+.Pinout ESC
+[width="90%",cols="6*^.^",frame="topbot",options="header"]
+|=========================================================  
+| Connected to | Pin Label | Input Output |Description | Wire Color | AWG
+| `disconnected` | 5v | Input | Power Supply for electronic | red | -
+| *to ground* | GND | Output | Ground for electronic  | black | -
+| *Mega D07, Mega D08, Mega D09* | Pulse | Input | PWM Signal control | grey | -
+| - | - | - |  - | - | - 
+| *Batt -* | battery negative pole | Input | Power supply from battery to ESC for motor | black | tbd
+| *Batt +* | battery positive pole | Input | Power supply from battery to ESC for motor | red | tbd
+| - | - | - |  - | - | - 
+| *Motor pole #1* | - | Output | Power drive to motor | red | tbd
+| *Motor pole #2* | - | Output | Power drive to motor | blue | tbd
+| *Motor pole #3* | - | Output | Power drive to motor | black | tbd
+|=========================================================
 
 == Real Time Clock Module 
 .Pinout 
@@ -141,3 +159,4 @@ image:https://github.com/ilpaco/lawn-mower/blob/dev/Fritz_Diagram/Main_bb.png[al
 | SQW | Output | Configurable square-wave output
 | GND | ground | 
 | 5V  | VCC    | DS1307 Power supply input
+|=========================================================
