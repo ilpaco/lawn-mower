@@ -14,5 +14,5 @@
 [width="90%",cols="3*^.^",frame="topbot",options="header"]
 |========================================================= 
 | Err / warn Code | Description | Proposed Solution 
-| *IN +* | Input                | Power Supply input *+*
+| Warn *101* | Electronics speed controller for blades not installed | Install it
 |========================================================= 
