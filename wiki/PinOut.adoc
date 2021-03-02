@@ -22,12 +22,12 @@ image:https://github.com/ilpaco/lawn-mower/blob/dev/Fritz_Diagram/Main_bb.png[al
 | *DC-DC->Pin - Out* | *GND* | - | - | - | -   
 | *DC-DC->Pin + Out* | *Vin* | - | - | - | -   
 | - | - | - | - | - | -  
-| *Blade drive#1->Pin 5-R_IS* | ADC0 | A0 | D54 | - | -   
-| *Blade drive#1->Pin 6-L_IS* | ADC1 | A1 | D55 | - | -
-| *Blade drive#2->Pin 5-R_IS* | ADC2 | A2 | D56 | - | -  
-| *Blade drive#2->Pin 6-L_IS* | ADC3 | A3 | D57 | - | -   
-| *Blade drive#3->Pin 5-R_IS* | ADC4 | A4 | D58 | TCK Test Clock | -
-| *Blade drive#3->Pin 6-L_IS* | ADC5 | A5 | D59 | TMS Test Mode | -
+| tbd | ADC0 | A0 | D54 | - | -   
+| tbd | ADC1 | A1 | D55 | - | -
+| tbd | ADC2 | A2 | D56 | - | -  
+| tbd | ADC3 | A3 | D57 | - | -   
+| tbd | ADC4 | A4 | D58 | TCK Test Clock | -
+| tbd | ADC5 | A5 | D59 | TMS Test Mode | -
 | tbd | ADC6 | A6 | D60 | TDO Data Output | -
 | tbd | ADC7 | A7 | D61 | TDI Data Input | -
 | tbd | ADC8 | A8 | D62 | - | PCINT 16
@@ -80,8 +80,8 @@ image:https://github.com/ilpaco/lawn-mower/blob/dev/Fritz_Diagram/Main_bb.png[al
 | Used For    | Default | Analog Pin | Digital pin | Comunication | Interrupts
 | *Internal raw header* | - | - | - | - | -
 | tbd | +5v Out | - | - | - | -
-| *Blade drive#1->Pin 3-R_EN* | D22 | - | D22 | - | -
-| *Blade drive#2->Pin 3-R_EN* | D24 | - | D24 | - | -
+| tbd | D22 | - | D22 | - | -
+| tbd | D24 | - | D24 | - | -
 | tbd | D26 | - | D26 | - | -
 | tbd | D28 | - | D28 | - | -
 | tbd | D30 | - | D30 | - | -
@@ -99,7 +99,7 @@ image:https://github.com/ilpaco/lawn-mower/blob/dev/Fritz_Diagram/Main_bb.png[al
 | *DC-DC->Pin - Out* | GND | - | - | - | -
 | *External raw header* | - | - | - | - | -
 | tbd | +5v Out | - | - | - | -
-| *Blade drive#2->Pin 3-R_EN* | D23 | - | D23 | - | -
+| tbd | D23 | - | D23 | - | -
 | tbd | D25 | - | D25 | - | -
 | tbd | D27 | - | D27 | - | -
 | tbd | D29 | - | D29 | - | -
@@ -129,30 +129,6 @@ image:https://github.com/ilpaco/lawn-mower/blob/dev/Fritz_Diagram/Main_bb.png[al
 | *IN -* | Input | Power Supply input *-*
 | *Vout +* | Output | Power Supply Out 5V
 | *Vout -* | Output | Power Supply Out GND
-|========================================================= 
-
-
-== Blade drive controllers H-bridge PWM DC
-
-*`ATTENTION: Pin 3-R_EN and Pin 4-L_EN must be shorted`*
-
-.Pinout DC-DC Converter
-[width="90%",cols="4*^.^",frame="topbot",options="header"]
-|========================================================= 
-| Connected to | Pin Label | Input Output |Description 
-| *Ref Mega Pinout* | 1-RPWM | input | Forward/Right PWM input signal
-| *Ref Mega Pinout* | 2-LPWM | input | Reverse/Left PWM input signal
-| *Ref Mega Pinout* | 3-R_EN `shorted to L_EN` | input | Foward/Right drive enable 
-| *Ref Mega Pinout* | 4-L_EN `shorted to R_EN` | input | Reverse/Left drive enable 
-| *Ref Mega Pinout* | 5-R_IS | output | Forward/Right current sensor/alarm
-| *Ref Mega Pinout* | 6-L_IS | output | Reverse/Left current sensor/alarm
-| *DC-DC->Pin + Out* | 7-VCC | input | +5V Power supply input for microcontroller
-| *DC-DC->Pin - Out* | 8-GND |  input | GND Power supply input for microcontroller
-| - | - | - | - 
-| *Blade Motor Negative pole* | M *-* | output | Connected to Negative Motor pole
-| *Blade Motor Positive pole* | M *+* | output | Connected to Positive Motor pole
-| *Battery +* | *+* | input | Connected to Positive battery pole as motor power supply 
-| *Battery -* | *-* |  input| Connected to Negative battery pole as motor power supply 
 |========================================================= 
 
 == Real Time Clock Module 

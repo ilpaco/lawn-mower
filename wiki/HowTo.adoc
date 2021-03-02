@@ -56,18 +56,18 @@ Vtangenziale =      --------------------------------= 0,8 m/s
                       
 *Nel nostro caso abbiamo:*
 
-- raggio 0,20 (20cm)
+- raggio 0,10 (10cm)
 
 - percorro 360gradi = 2Pigreco (radianti) 
 
 - 184,8 giri al secondo @11.088rpm. Prendiamo per eccesso 185 giri al secondo, che corrisponde ad un angolo giro (360°) ogni 0,0054 secondi.
 
 [source]
-                     0,20(mt) x  2*PiGreco (radianti) 
-Vtangenziale =      --------------------------------=  circa 232,6 m/s
+                     0,10(mt) x  2*PiGreco (radianti) 
+Vtangenziale =      --------------------------------=  circa 116 m/s
                       0,0054(s)
                       
-*Per cui l'estremità del nostro disco da taglio avrà una velocità tangenziale di _232,6_ m/s al numero di RPM massimi con batteria completamente carica.* Essendo la velocità del suono pari a 343 m/s,  siamo sotto alla velocità del suono.
+*Per cui l'estremità del nostro disco da taglio avrà una velocità tangenziale di 116_ m/s al numero di RPM massimi con batteria completamente carica.* Essendo la velocità del suono pari a 343 m/s,  siamo sotto alla velocità del suono.
 
 ==== FullPower Variatore PRO 25A BEC
 [width="90%",cols="2*^.^",frame="topbot"]
